@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('twilio', {
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            credential: {value: ""},
+            action: {value: "sendMessage"},
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "arrow-right.png",
+        label: function() {
+            return this.name || "Twillio API";
+        }
+    });
+</script>
+<script type="text/x-red" data-template-name="twilio">
+    <div class="form-row">
+        <label for="node-input-credential"><i class="icon-tag"></i> Credential</label>
+        <input type="text" id="node-input-credential" data-property="credential" placeholder="Enter the credential">
+    </div>
+    <div class="form-row">
+        <label for="node-input-action"><i class="icon-tag"></i> API Actions</label>
+        <select id="node-input-action" data-property="action">
+            <option value="sendMessage">Send Message</option>
+        </select>
+    </div>
+</script>
